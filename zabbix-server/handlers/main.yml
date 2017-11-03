@@ -1,0 +1,9 @@
+---
+# handlers file for zabbix-server
+
+- name: zabbix-server restarted
+  service: name=zabbix-server state=restarted enabled=yes
+  tags: zabbix-server
+
+- name: restart postgresql
+  service: name=postgresql state=restarted
